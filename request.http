@@ -1,0 +1,48 @@
+POST http://127.0.0.1:8000/api/v1/api-token-auth/
+Content-Type: application/json
+
+{
+    "username": "Anton",
+    "password": "12345"
+}
+
+###
+
+POST http://127.0.0.1:8000/auth/token/login/
+Content-Type: application/json
+
+{
+    "username": "Anton",
+    "password": "Laaols342"
+}
+
+###
+
+GET http://127.0.0.1:8000/api/v1/posts/1
+Authorization: Token b8d0ce7fa3cd018c939a51152ae7d116811dfaef
+
+###
+
+GET http://127.0.0.1:8000/api/v1/groups/
+Authorization: Token b8d0ce7fa3cd018c939a51152ae7d116811dfaef
+
+###
+
+POST http://127.0.0.1:8000/api/v1/posts/
+Authorization: Token b8d0ce7fa3cd018c939a51152ae7d116811dfaef
+Content-Type: application/json
+
+{
+    "text": "Пост с группой",
+    "group": 1
+}
+
+###
+
+Post http://127.0.0.1:8000/api/v1/posts/1/comments/
+Authorization: Token b8d0ce7fa3cd018c939a51152ae7d116811dfaef
+Content-Type: application/json
+
+{
+    "text": "Комментарий с группой"
+}
