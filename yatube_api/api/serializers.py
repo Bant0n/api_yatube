@@ -8,13 +8,13 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ['id', 'author', 'text', 'pub_date', 'image', 'group']
+        fields = ('id', 'author', 'text', 'pub_date', 'image', 'group')
 
 
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
-        fields = ['id', 'title', 'slug', 'description']
+        fields = ('id', 'title', 'slug', 'description')
 
 
 class CommentSerializer(serializers.ModelSerializer):
